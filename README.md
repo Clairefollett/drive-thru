@@ -1,6 +1,4 @@
 # drive-thru
-Homework assignment for Opal Labs:
-
 The requirements for the project: 
 1. Create a visual menu where the drive-thru employee can select menu items to build the order and then send the order to the cooks. 
 2. Handle a case where someone has decided to change their order once they get to the window. 
