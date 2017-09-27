@@ -3,8 +3,8 @@ import OrderListItem from './OrderListItem';
 import shortid from 'shortid';
 
 const OrderList = (props) => {
+
     const addedFoodItems = props.order.map((item) => {
-        console.log(props)
         return (
             <OrderListItem 
                 key={shortid.generate()}
@@ -14,10 +14,12 @@ const OrderList = (props) => {
     })
 
     return (
-        <ul>
+    <div>
             {addedFoodItems}
-        </ul>
+    </div>
     )
 }
+
+
 
 export default OrderList;
