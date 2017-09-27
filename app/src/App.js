@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FoodItems from './components/FoodItems';
 import MenuList from './components/MenuList';
 import OrderList from './components/OrderList';
+import Total from './components/Total';
 
 class App extends Component {
   constructor(props) {
@@ -16,14 +17,18 @@ class App extends Component {
 
   onItemSelect(item) {
     this.setState({
-      selectedItems: [...this.state.selectedItems, item]
+      selectedItems: [...this.state.selectedItems, item],
+      total: selectedItems => {
+        Object.values(selectedItems).reduce((a, b) => a + b)
+      }
     }) 
   }
   
   render() {
     return (
       <div className="App">
-        <OrderList 
+        <Total order={this.state.selectedItems}/>
+        <OrderList
           order={this.state.selectedItems} 
         />
         <MenuList

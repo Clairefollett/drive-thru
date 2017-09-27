@@ -1,12 +1,16 @@
 import React from 'react';
-import OrderListItem from './OrderListItem';
 import shortid from 'shortid';
 
 const OrderList = (props) => {
+    const OrderListItem = ({ item }) => {
+        return (
+            <div>{item.title} {item.price}</div>
+        )
+    }
 
     const addedFoodItems = props.order.map((item) => {
         return (
-            <OrderListItem 
+            <OrderListItem
                 key={shortid.generate()}
                 item={item}
             />
@@ -14,12 +18,10 @@ const OrderList = (props) => {
     })
 
     return (
-    <div>
+        <div>
             {addedFoodItems}
-    </div>
+        </div>
     )
 }
-
-
 
 export default OrderList;
