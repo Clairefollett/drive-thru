@@ -10,16 +10,21 @@ const OrderList = (props) => {
 
     const addedFoodItems = props.order.map((item) => {
         return (
-            <OrderListItem
+            <OrderListItem  
                 key={shortid.generate()}
                 item={item}
             />
         )
     })
-
+    const order = props.order;
+    const handleSubmit=props.handleSubmit;
+    
     return (
         <div>
-            {addedFoodItems}
+            <div>
+                {addedFoodItems}
+            </div>
+            <button onClick={() => handleSubmit(order)}>Send to the Cook</button>
         </div>
     )
 }

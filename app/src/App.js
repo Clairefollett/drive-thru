@@ -10,26 +10,32 @@ class App extends Component {
 
     this.state = {
       items: FoodItems,
-      selectedItems: []
+      selectedItems: [],
+      total: []
     }
     this.onItemSelect = this.onItemSelect.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   onItemSelect(item) {
     this.setState({
       selectedItems: [...this.state.selectedItems, item],
-      total: selectedItems => {
-        Object.values(selectedItems).reduce((a, b) => a + b)
-      }
     }) 
+  }
+
+  handleSubmit(order) {
+    this.setState({
+      total: [...this.state.total, order]
+    })
   }
   
   render() {
     return (
       <div className="App">
-        <Total order={this.state.selectedItems}/>
+        <Total cookList={this.state.total}/>
         <OrderList
-          order={this.state.selectedItems} 
+          order={this.state.selectedItems}
+          handleSubmit={this.handleSubmit}
         />
         <MenuList
           onItemSelect={this.onItemSelect}
