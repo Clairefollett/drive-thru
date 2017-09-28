@@ -1,12 +1,19 @@
 import React from 'react';
 
-const Total = (props) => {
-    console.log(props)
-    return (
-        <div>
-            I am the cooks list
-        </div>
-    )
+class Total extends React.Component {
+    checkProps() {
+        const singleOrder = this.props.cookList
+        singleOrder.forEach((list) => {
+            console.log(list)   
+        })
+    }
+    
+    render() {
+        return (
+            <div>
+                {this.checkProps()}
+            </div>
+        )}
 }
 
 export default Total;

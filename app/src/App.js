@@ -25,19 +25,25 @@ class App extends Component {
 
   handleSubmit(order) {
     this.setState({
-      total: [...this.state.total, order]
+      total: [...this.state.total, order],
+      selectedItems: []
     })
   }
   
   render() {
     return (
       <div className="App">
-        <Total cookList={this.state.total}/>
+        <Total
+          className="cook-list"
+          cookList={this.state.total}
+        />
         <OrderList
+          className="current-order"
           order={this.state.selectedItems}
           handleSubmit={this.handleSubmit}
         />
         <MenuList
+          className="menu"
           onItemSelect={this.onItemSelect}
           items={this.state.items}
         />
