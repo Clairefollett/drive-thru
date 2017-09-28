@@ -6,10 +6,16 @@ class Total extends React.Component {
             alert('The manager has been alerted')
         }
     }
+    
     checkProps() {
-        this.props.cookList.forEach((food) => {
-            food.forEach((item) => {
-                console.log(item)
+        const cooksListItems = this.props.cookList.forEach((food) => {
+            food.map((item) => {
+                return (
+                    <li>
+                        <div>I am rendering below:</div>
+                        <div>{item.title}</div>
+                    </li>
+                )
             })
         })
     }
@@ -20,7 +26,7 @@ class Total extends React.Component {
                 <div>{this.alertManager()}</div>
                 <div>{this.checkProps()}</div>
             </div>
-        )}
+    )}
 }
 
 export default Total;
