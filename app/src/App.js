@@ -3,6 +3,7 @@ import FoodItems from './components/FoodItems';
 import MenuList from './components/MenuList';
 import OrderList from './components/OrderList';
 import Total from './components/Total';
+import TotalListOrder from './components/TotalListOrder';
 
 class App extends Component {
   constructor(props) {

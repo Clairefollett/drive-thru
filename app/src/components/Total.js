@@ -1,17 +1,24 @@
 import React from 'react';
 
 class Total extends React.Component {
+    alertManager() {
+        if (this.props.cookList.length > 4) {
+            alert('The manager has been alerted')
+        }
+    }
     checkProps() {
-        const singleOrder = this.props.cookList
-        singleOrder.forEach((list) => {
-            console.log(list)   
+        this.props.cookList.forEach((food) => {
+            food.forEach((item) => {
+                console.log(item)
+            })
         })
     }
-    
+
     render() {
         return (
             <div>
-                {this.checkProps()}
+                <div>{this.alertManager()}</div>
+                <div>{this.checkProps()}</div>
             </div>
         )}
 }
