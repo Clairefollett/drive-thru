@@ -8,15 +8,18 @@ class Total extends React.Component {
     }
     
     checkProps() {
-        const cooksListItems = this.props.cookList.forEach((food) => {
-            food.map((item) => {
-                return (
-                    <li>
-                        <div>I am rendering below:</div>
-                        <div>{item.title}</div>
-                    </li>
-                )
-            })
+        return this.props.cookList.map((food) => {
+            return (
+                <div>
+                    <hr /> 
+                    { food.map((item) => (
+                        <li>
+                            <div>I am rendering below:</div>
+                            <div>{item.title}</div>
+                        </li>
+                    ))}
+                </div>
+            );
         })
     }
 
