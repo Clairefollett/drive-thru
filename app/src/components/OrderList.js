@@ -4,7 +4,7 @@ import shortid from 'shortid';
 const OrderList = (props) => {
     const OrderListItem = ({ item }) => {
         return (
-            <div>{item.title} {item.price}</div>
+            <div>{item.title}</div>
         )
     }
 
@@ -16,8 +16,9 @@ const OrderList = (props) => {
             />
         )
     })
+
     const order = props.order;
-    const handleSubmit=props.handleSubmit;
+    const handleSubmit= props.handleSubmit;
     
     return (
         <div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import shortid from 'shortid';
 
 class Total extends React.Component {
     alertManager() {
@@ -7,16 +8,16 @@ class Total extends React.Component {
         }
     }
     
-    checkProps() {
+    renderProps() {
         return this.props.cookList.map((food) => {
             return (
-                <div>
-                    <hr /> 
+                <div key={shortid.generate()} className="orders">
+                    <hr />
+                    <button>Delete Order</button>
                     { food.map((item) => (
-                        <li>
-                            <div>I am rendering below:</div>
+                        <div key={shortid.generate()}>
                             <div>{item.title}</div>
-                        </li>
+                        </div>
                     ))}
                 </div>
             );
@@ -27,7 +28,7 @@ class Total extends React.Component {
         return (
             <div>
                 <div>{this.alertManager()}</div>
-                <div>{this.checkProps()}</div>
+                <div>{this.renderProps()}</div>
             </div>
     )}
 }
