@@ -12,8 +12,7 @@ class App extends Component {
     this.state = {
       items: FoodItems,
       selectedItems: [],
-      total: [],
-      completedOrders: []
+      total: []
     }
     this.onItemSelect = this.onItemSelect.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);

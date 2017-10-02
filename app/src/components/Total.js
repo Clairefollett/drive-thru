@@ -1,36 +1,28 @@
 import React from 'react';
 import shortid from 'shortid';
+import TotalListItem from './TotalListItem';
 
-class Total extends React.Component {
-    alertManager() {
-        if (this.props.cookList.length > 4) {
-            alert('The manager has been alerted')
-        }
-    }
-    
-    renderProps() {
-        return this.props.cookList.map((food) => {
-            return (
-                <div key={shortid.generate()} className="orders">
-                    <hr />
-                    <button>Delete Order</button>
-                    { food.map((item) => (
-                        <div key={shortid.generate()}>
-                            <div>{item.title}</div>
-                        </div>
-                    ))}
-                </div>
-            );
-        })
+const Total = (props) => {
+    if (props.cookList.length > 4) {
+        alert('The manager has been alerted')
     }
 
-    render() {
+    const renderProps = props.cookList.map((food) => {
+        console.log(TotalListItem)
         return (
-            <div>
-                <div>{this.alertManager()}</div>
-                <div>{this.renderProps()}</div>
-            </div>
-    )}
+            <TotalListItem 
+                food={food}
+                key={shortid.generate()}
+            />
+        );
+    })
+    
+    return (
+        <div>
+            <div>Props are rendering</div>
+            <div>{renderProps}</div>
+        </div>
+    )
 }
 
 export default Total;
