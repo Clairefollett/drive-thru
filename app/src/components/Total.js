@@ -7,10 +7,11 @@ const Total = (props) => {
         alert('the manager has been alerted')
     }
 
-    const renderProps = props.cookList.map((food) => {
+    const renderProps = props.cookList.map((food, index) => {
         console.log(props.complete)
         return (
-            <TotalListItem 
+            <TotalListItem
+                index={index}
                 food={food}
                 key={shortid.generate()}
                 onDelete={props.onDelete}
