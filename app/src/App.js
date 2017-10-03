@@ -12,10 +12,14 @@ class App extends Component {
     this.state = {
       items: FoodItems,
       selectedItems: [],
-      total: []
+      total: [],
+      completedItems: [],
+      deletedItems: []
     }
     this.onItemSelect = this.onItemSelect.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.onComplete = this.onComplete.bind(this);
+    this.onDelete = this.onDelete.bind(this);
   }
 
   onItemSelect(item) {
@@ -30,13 +34,42 @@ class App extends Component {
       selectedItems: []
     })
   }
+
+  onDelete(food) {
+    const orders = this.state.total;
+    orders.forEach((food) => {
+      for(var i = orders.length-1; i--;){
+        if (orders[i] === food) orders.splice(i, 1);
+      }
+      this.setState({
+        deletedItems: [...this.state.deletedItems, food],
+        total: [orders]
+      })
+    })
+  }
+
+  onComplete(food) {
+    const orders = this.state.total;
+    orders.forEach((food) => {
+      for(var i = orders.length-1; i--;){
+        if (orders[i] === food) orders.splice(i, 1);
+      }
+      this.setState({
+        completedItems: [...this.state.completedItems, food],
+        total: [orders]
+      })
+    })
+  }
   
   render() {
     return (
       <div className="App">
         <Total
           className="cook-list"
+          complete={this.state.completedItems}
           cookList={this.state.total}
+          onComplete={this.onComplete}
+          onDelete={this.onDelete}
         />
         <OrderList
           className="current-order"

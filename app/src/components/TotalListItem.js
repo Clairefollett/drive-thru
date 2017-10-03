@@ -4,9 +4,11 @@ import shortid from 'shortid';
 const TotalListItem = (props) => {
     return (
         <ul>
-            {props.food.map((item) => {
+        <button onClick={() => props.onDelete(props.food)}>Delete Order</button>
+        <button onClick={() => props.onComplete(props.food)}>Complete Order</button>
+            {props.food.map((item, index) => {
                 return (
-                    <li key={shortid.generate()}>{item.title}</li>     
+                    <li key={shortid.generate()} id={index}>{item.title}</li>     
                 )
             })}
         </ul>

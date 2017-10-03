@@ -4,22 +4,24 @@ import TotalListItem from './TotalListItem';
 
 const Total = (props) => {
     if (props.cookList.length > 4) {
-        alert('The manager has been alerted')
+        alert('the manager has been alerted')
     }
 
     const renderProps = props.cookList.map((food) => {
-        console.log(TotalListItem)
+        console.log(props.complete)
         return (
             <TotalListItem 
                 food={food}
                 key={shortid.generate()}
+                onDelete={props.onDelete}
+                onComplete={props.onComplete}
             />
         );
     })
     
     return (
         <div>
-            <div>Props are rendering</div>
+            <div>Cookslist</div>
             <div>{renderProps}</div>
         </div>
     )
