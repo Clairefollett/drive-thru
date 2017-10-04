@@ -5,7 +5,9 @@ import SearchBar from './SearchBar';
 const TotalListItem = (props) => {
     return (
         <ul className="cook-list" id={props.index}>
-        <SearchBar />
+        <SearchBar 
+            food={props.food}
+        />
             {props.food.map((item, index) => {
                 return (
                     <li className="cook-list-items" key={shortid.generate()} id={index}>{item.title}</li>     
