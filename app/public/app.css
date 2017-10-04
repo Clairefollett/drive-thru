@@ -45,3 +45,25 @@ div.added-food {
     text-align: center;
     vertical-align: middle;
 }
+
+ul.cook-list {
+    display: inline-block;
+    list-style-type: none;
+}
+
+li.cook-list-items {
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+button.delete {
+    background-color: red;
+    display: block;
+}
+
+button.complete {
+    background-color: green;
+}

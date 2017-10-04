@@ -8,9 +8,7 @@ const FoodItems = [
     {title: 'Hamburger'},
     {title: 'Toast'},
     {title: 'Coffee'},
-    {title: 'Noodles'},
-    {title: 'Ice Cream'},
-    {title: 'Diet Coke'}
+    {title: 'Noodles'}
 ]
 
 export default FoodItems;

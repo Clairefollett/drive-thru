@@ -8,7 +8,6 @@ const Total = (props) => {
     }
 
     const renderProps = props.cookList.map((food, index) => {
-        console.log(props.complete)
         return (
             <TotalListItem
                 index={index}
@@ -22,7 +21,7 @@ const Total = (props) => {
     
     return (
         <div>
-            <div>Cookslist</div>
+            <h1>Opal's Drive Thru</h1>
             <div>{renderProps}</div>
         </div>
     )
