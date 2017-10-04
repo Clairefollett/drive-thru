@@ -21,11 +21,11 @@ const OrderList = (props) => {
     const handleSubmit= props.handleSubmit;
     
     return (
-        <div>
-            <div>
+        <div className="order-list-container">
+            <div className="added-food">
                 {addedFoodItems}
             </div>
-            <button onClick={() => handleSubmit(order)}>Send to the Cook</button>
+            <button className="send-cook"onClick={() => handleSubmit(order)}>Send to the Cook</button>
         </div>
     )
 }

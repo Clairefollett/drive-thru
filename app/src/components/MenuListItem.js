@@ -2,8 +2,8 @@ import React from 'react';
 
 const MenuListItem = ({item, onItemSelect}) => {
     return (
-        <li onClick={() => onItemSelect(item)}>
-            <div>{item.title}</div>
+        <li className="food-item" onClick={() => onItemSelect(item)}>
+            <div className="specific-item">{item.title}</div>
         </li>
     )
 }

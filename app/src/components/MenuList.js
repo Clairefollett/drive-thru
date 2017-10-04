@@ -13,7 +13,7 @@ const MenuList = (props) => {
     });
 
     return (
-        <ul>
+        <ul className="menu">
             {foodItems}
         </ul>
     )

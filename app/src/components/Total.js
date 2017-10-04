@@ -3,7 +3,7 @@ import shortid from 'shortid';
 import TotalListItem from './TotalListItem';
 
 const Total = (props) => {
-    if (props.cookList.length > 4) {
+    if (props.cookList.length === 4) {
         alert('the manager has been alerted')
     }
 

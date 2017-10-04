@@ -87,15 +87,15 @@ class App extends Component {
           onComplete={this.onComplete}
           onDelete={this.onDelete}
         />
-        <OrderList
-          className="current-order"
-          order={this.state.selectedItems}
-          handleSubmit={this.handleSubmit}
-        />
         <MenuList
           className="menu"
           onItemSelect={this.onItemSelect}
           items={this.state.items}
+        />
+        <OrderList
+          className="current-order"
+          order={this.state.selectedItems}
+          handleSubmit={this.handleSubmit}
         />
       </div>
     );

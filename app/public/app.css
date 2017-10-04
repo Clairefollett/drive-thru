@@ -1,0 +1,47 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    list-style-type: none;
+    width: 40%;
+    display: inline-block;
+}
+
+.food-item {
+    width: 50%;
+    display: inline-block;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 3%;
+    margin: 2%
+}
+
+div.specific-item {
+    text-align: center;
+    vertical-align: middle;
+}
+
+div.order-list-container {
+    width: 40%;
+    display: inline-block;
+}
+
+button.send-cook {
+    width: 50%;
+    margin: 25%;
+}
+
+div.added-food {
+    text-align: center;
+    vertical-align: middle;
+}
