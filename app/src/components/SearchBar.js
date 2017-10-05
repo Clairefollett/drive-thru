@@ -20,7 +20,12 @@ class SearchBar extends Component {
         const input = this.state.inputValue;
         const newFood = this.props.food.push({title: input}) 
         this.props.updateFoodList(newFood)
+        this.setState({
+            inputValue: ''
+        })
+
     }
+
 
     render() {
         return (<div>
