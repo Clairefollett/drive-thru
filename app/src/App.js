@@ -86,6 +86,7 @@ class App extends Component {
           cookList={this.state.total}
           onComplete={this.onComplete}
           onDelete={this.onDelete}
+          inputValue={this.state.inputValue}
         />
         <MenuList
           className="menu"

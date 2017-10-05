@@ -1,6 +1,6 @@
 import React from 'react';
-import shortid from 'shortid';
 import TotalListItem from './TotalListItem';
+import SearchBar from './SearchBar';
 
 const Total = (props) => {
     if (props.cookList.length === 4) {
@@ -12,10 +12,10 @@ const Total = (props) => {
             <TotalListItem
                 index={index}
                 food={food}
-                key={shortid.generate()}
+                key={index}
                 onDelete={props.onDelete}
                 onComplete={props.onComplete}
-                onInputAdd={props.onInputAdd}
+                inputValue={props.inputValue}
             />
         );
     })
