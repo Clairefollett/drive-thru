@@ -15,6 +15,7 @@ const Total = (props) => {
                 key={shortid.generate()}
                 onDelete={props.onDelete}
                 onComplete={props.onComplete}
+                onInputAdd={props.onInputAdd}
             />
         );
     })
