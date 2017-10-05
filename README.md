@@ -5,3 +5,13 @@ The requirements for the project:
 3. Handle a case where someone has decided to cancel an order once they get to the window. 
 4. Have a way to view current open orders and then close them when they're handed to our happy customers. 
 5. Alert the manager when the total number of open orders goes above 4. 
+
+```git clone https://github.com/Clairefollett/drive-thru.git```
+
+```cd drive-thru```
+
+```npm install```
+
+```npm start```
+
+Have fun!
