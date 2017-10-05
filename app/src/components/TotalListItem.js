@@ -33,23 +33,5 @@ class TotalListItem extends Component {
         )
     }
 }
-// const TotalListItem = (props) => {
-//     return (
-        // <ul className="cook-list" id={props.index}>
-        // <SearchBar 
-        //     food={props.food}
-        //     inputValue={props.inputValue}
-        // />
-        //     {props.food.map((item, index) => {
-        //         return (
-        //             <li className="cook-list-items" key={shortid.generate()} id={index}>{item.title}</li>     
-        //         )
-        //     })}
-        // <button className="delete" onClick={() => props.onDelete(props.food)}>Delete Order</button>
-        // <button className="complete" onClick={() => props.onComplete(props.food)}>Complete Order</button>
-        // </ul>
-        
-//     );
-// };
 
 export default TotalListItem;
