@@ -18,8 +18,8 @@ class SearchBar extends Component {
     addItem(event) {
         event.preventDefault();
         const input = this.state.inputValue;
-        this.props.food.push({title: input}) 
-        console.log(this.props.food) 
+        const newFood = this.props.food.push({title: input}) 
+        this.props.updateFoodList(newFood)
     }
 
     render() {
