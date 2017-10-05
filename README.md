@@ -10,6 +10,8 @@ The requirements for the project:
 
 ```cd drive-thru```
 
+```cd app```
+
 ```npm install```
 
 ```npm start```
