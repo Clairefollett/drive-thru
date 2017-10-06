@@ -14,6 +14,14 @@ class TotalListItem extends Component {
         this.setState({ food: orders})
     }
 
+    removeItem(index) {
+        const updated = this.props.food.splice(index, 1)
+
+        this.setState({
+            food: updated
+        })
+    }
+
     render() {
         return (
             <ul className="cook-list" id={this.props.index}>
@@ -24,7 +32,7 @@ class TotalListItem extends Component {
                 />
                 {this.props.food.map((item, index) => {
                     return (
-                        <li className="cook-list-items" key={shortid.generate()} id={index}>{item.title}</li>
+                        <li onClick={this.removeItem.bind(this, index)} className="cook-list-items" key={shortid.generate()} id={index}>{item.title}</li>
                     )
                 })}
                 <button className="delete" onClick={() => this.props.onDelete(this.props.food)}>Delete Order</button>
