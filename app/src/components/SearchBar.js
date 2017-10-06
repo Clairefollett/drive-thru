@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MdAddCircleOutline from 'react-icons/lib/md/add-circle-outline'
 
 class SearchBar extends Component {
     constructor(props) {
@@ -39,7 +40,7 @@ class SearchBar extends Component {
                         placeholder="AddItem"
                     />
                     <span>
-                        <button onClick={this.addItem} className="add-new-item">Add Food</button>
+                        <MdAddCircleOutline onClick={this.addItem} className="add-new-item" />
                     </span>
                 </div>
             </form>

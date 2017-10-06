@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import shortid from 'shortid';
 import SearchBar from './SearchBar';
+import MdClose from 'react-icons/lib/md/close';
 
 
 class TotalListItem extends Component {
@@ -32,11 +33,18 @@ class TotalListItem extends Component {
                 />
                 {this.props.food.map((item, index) => {
                     return (
-                        <li onClick={this.removeItem.bind(this, index)} className="cook-list-items" key={shortid.generate()} id={index}>{item.title}</li>
+                        <div className="cook-list-items-wrapper" key={index}>
+                            <li className="cook-list-items" key={shortid.generate()} id={index}>{item.title}</li>
+                            <MdClose className="icon" onClick={this.removeItem.bind(this, index)} />
+                        </div>
                     )
                 })}
-                <button className="delete" onClick={() => this.props.onDelete(this.props.food)}>Delete Order</button>
-                <button className="complete" onClick={() => this.props.onComplete(this.props.food)}>Complete Order</button>
+                <div className="delete-button-wrapper">
+                    <button className="delete" onClick={() => this.props.onDelete(this.props.food)}>Delete Order</button>
+                </div>
+                <div className="complete-button-wrapper">
+                    <button className="complete" onClick={() => this.props.onComplete(this.props.food)}>Complete Order</button>
+                </div>
             </ul>
         )
     }

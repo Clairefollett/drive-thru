@@ -1,5 +1,6 @@
 import React from 'react';
 import shortid from 'shortid';
+import TiArrowUpOutline from 'react-icons/lib/ti/arrow-up-outline'
 
 const OrderList = (props) => {
     const OrderListItem = ({ item }) => {
@@ -25,7 +26,8 @@ const OrderList = (props) => {
             <div className="added-food">
                 {addedFoodItems}
             </div>
-            <button className="send-cook"onClick={() => handleSubmit(order)}>Send to the Cook</button>
+            <TiArrowUpOutline className="send-cook"onClick={() => handleSubmit(order)} />
+            <p>Send</p>
         </div>
     )
 }
