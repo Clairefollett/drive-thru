@@ -1,9 +1,8 @@
 import React from 'react';
 import TotalListItem from './TotalListItem';
-import SearchBar from './SearchBar';
 
 const Total = (props) => {
-    if (props.cookList.length === 4) {
+    if (props.cookList.length === 4 && props.selectedItems.length === 0) {
         alert('the manager has been alerted')
     }
 
@@ -15,7 +14,6 @@ const Total = (props) => {
                 key={index}
                 onDelete={props.onDelete}
                 onComplete={props.onComplete}
-                inputValue={props.inputValue}
             />
         );
     })
