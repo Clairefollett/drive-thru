@@ -4,8 +4,9 @@ import TiArrowUpOutline from 'react-icons/lib/ti/arrow-up-outline'
 
 const OrderList = (props) => {
     const OrderListItem = ({ item }) => {
+        const number = '$' + parseFloat(Math.round(item.price * 100) / 100).toFixed(2);
         return (
-            <div>{item.title}</div>
+            <div>{item.title} {number}</div>
         )
     }
 
