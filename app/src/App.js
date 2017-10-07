@@ -37,44 +37,22 @@ class App extends Component {
 
   onDelete(food) {
     const orders = this.state.total;
-    if(orders > 1) {
-      orders.forEach((food) => {
-        for(var i = orders.length-1; i--;){
-          if (orders[i] === food) orders.splice(i, 1);
-        }
-        this.setState({
-          deletedItems: [...this.state.deletedItems, food],
-          total: orders
-        })
-      })
-    } else {
-      orders.shift();
-      this.setState({
-        deletedItems: [...this.state.deletedItems, food],
-        total: orders
-      })
-    }
+    const remove = orders.indexOf(food);
+    const refresh = orders.splice(remove, 1)
+    this.setState({
+      deletedItems: [...this.state.deletedItems, refresh],
+      total: orders
+    })
   }
 
   onComplete(food) {
     const orders = this.state.total;
-    if(orders > 1) {
-      orders.forEach((food) => {
-        for(var i = orders.length-1; i--;){
-          if (orders[i] === food) orders.splice(i, 1);
-        }
-        this.setState({
-          completedItems: [...this.state.completedItems, food],
-          total: orders
-        })
-      })
-    } else {
-      orders.shift();
-      this.setState({
-        completedItems: [...this.state.completedItems, food],
-        total: orders
-      })
-    }
+    const remove = orders.indexOf(food);
+    const refresh = orders.splice(remove, 1)
+    this.setState({
+      completedItems: [...this.state.completedItems, refresh],
+      total: orders
+    })
   }
   
   render() {
