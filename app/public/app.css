@@ -52,6 +52,7 @@ p {
 ul.cook-list {
     display: inline-block;
     list-style-type: none;
+    width: 30%;
 }
 
 div.cook-list-items-wrapper {
@@ -60,7 +61,7 @@ div.cook-list-items-wrapper {
 
 li.cook-list-items {
     display: inline-block;
-    width: 40%;
+    width: 60%;
     padding-top: 5%;
     padding-right: 20%
 }

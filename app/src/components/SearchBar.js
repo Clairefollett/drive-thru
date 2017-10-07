@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MdAddCircleOutline from 'react-icons/lib/md/add-circle-outline'
+import FoodItems from './FoodItems';
 
 class SearchBar extends Component {
     constructor(props) {
@@ -18,9 +19,16 @@ class SearchBar extends Component {
 
     addItem(event) {
         event.preventDefault();
-        const input = this.state.inputValue;
-        const newFood = this.props.food.push({title: input}) 
-        this.props.updateFoodList(newFood)
+        const input = { title: "", price: 0 };
+        input.title = this.state.inputValue;
+        FoodItems.forEach((item) => {
+            if (item.title === input.title) {
+                const itemPrice = item.price;
+                input.price = itemPrice;
+                const newFood = this.props.food.push(input)
+                this.props.updateFoodList(newFood)
+            }
+        })
         this.setState({
             inputValue: ''
         })

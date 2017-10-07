@@ -17,7 +17,7 @@ const Total = (props) => {
             />
         );
     })
-    
+
     return (
         <div>
             <h1>Opal's Drive Thru</h1>

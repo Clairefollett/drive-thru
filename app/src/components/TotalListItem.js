@@ -8,6 +8,7 @@ class TotalListItem extends Component {
     constructor(props) {
         super(props);
         this.updateFoodList = this.updateFoodList.bind(this)
+        this.calculatePrice = this.calculatePrice.bind(this)
     }
 
     updateFoodList() {
@@ -38,11 +39,13 @@ class TotalListItem extends Component {
                     food={this.props.food}
                     inputValue={this.props.inputValue}
                     updateFoodList={this.updateFoodList}
+                    calculatePrice={this.calculatePrice}
                 />
                 {this.props.food.map((item, index) => {
+                    const number = '$' + parseFloat(Math.round(item.price * 100) / 100).toFixed(2);
                     return (
                         <div className="cook-list-items-wrapper" key={index}>
-                            <li className="cook-list-items" key={shortid.generate()} id={index}>{item.title}</li>
+                            <li className="cook-list-items" key={shortid.generate()} id={index}>{item.title} {number}</li>
                             <MdClose className="icon" onClick={this.removeItem.bind(this, index)} />
                         </div>
                     )
