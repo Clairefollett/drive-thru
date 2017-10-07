@@ -23,6 +23,14 @@ class TotalListItem extends Component {
         })
     }
 
+    calculatePrice(prev, next) {
+        const total = this.props.food.reduce(function(a, b) {
+            return a + b.price;
+          }, 0)
+          const number = parseFloat(Math.round(total * 100) / 100).toFixed(2);
+          return ('Total: ' + '$' + number)
+        }
+
     render() {
         return (
             <ul className="cook-list" id={this.props.index}>
@@ -39,6 +47,7 @@ class TotalListItem extends Component {
                         </div>
                     )
                 })}
+                <div className="total">{this.calculatePrice()}</div>
                 <div className="delete-button-wrapper">
                     <button className="delete" onClick={() => this.props.onDelete(this.props.food)}>Delete Order</button>
                 </div>

@@ -93,6 +93,11 @@ div.complete-button-wrapper {
     padding-top: 5%;
 }
 
+div.total {
+    text-align: right;
+    padding-top: 5%;
+}
+
 button.delete {
     background-color: red;
     display: inline-block;
