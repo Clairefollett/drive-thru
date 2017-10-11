@@ -1,0 +1,116 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    width: 100%;
+    height: 100%;
+}
+#root {
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    list-style-type: none;
+    width: 40%;
+    display: inline-block;
+}
+
+.food-item {
+    width: 50%;
+    display: inline-block;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 3%;
+    margin: 2%
+}
+
+div.specific-item {
+    text-align: center;
+    vertical-align: middle;
+}
+
+div.order-list-container {
+    width: 40%;
+    display: inline-block;
+    text-align: center;
+}
+
+.send-cook {
+    width: 20%;
+    height: 20%;
+    margin-top: 10%;
+    fill: purple
+}
+
+p {
+    margin: 0;
+    color: purple;
+}
+
+ul.cook-list {
+    display: inline-block;
+    list-style-type: none;
+    width: 30%;
+}
+
+div.cook-list-items-wrapper {
+    text-align: center;
+}
+
+li.cook-list-items {
+    display: inline-block;
+    width: 60%;
+    padding-top: 5%;
+    padding-right: 20%
+}
+
+div.edit-input-div {
+    padding-bottom: 5%;
+}
+
+input.form-control {
+    width: 75%;
+}
+
+.add-new-item {
+    height: 15%;
+    width: 15%;
+    fill: green;
+}
+
+h1 {
+    text-align: center;
+}
+
+div.delete-button-wrapper {
+    text-align: center;
+    padding-top: 5%;
+}
+
+div.complete-button-wrapper {
+    text-align: center;
+    padding-top: 5%;
+}
+
+div.total {
+    text-align: right;
+    padding-top: 5%;
+}
+
+button.delete {
+    background-color: red;
+    display: inline-block;
+    width: 60%;
+}
+
+button.complete {
+    background-color: green;
+    display: inline-block;
+    width: 60%
+}
+
+.icon {
+    fill: red;
+}
