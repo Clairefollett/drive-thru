@@ -22,7 +22,7 @@ class SearchBar extends Component {
         const input = { title: "", price: 0 };
         input.title = this.state.inputValue;
         FoodItems.forEach((item) => {
-            if (item.title === input.title) {
+            if (item.title === input.title || item.title.toLowerCase() === input.title) {
                 const itemPrice = item.price;
                 input.price = itemPrice;
                 const newFood = this.props.food.push(input)
