@@ -1,6 +1,6 @@
 html {
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 70%;
 }
 body {
     width: 100%;
@@ -47,6 +47,10 @@ div.order-list-container {
 p {
     margin: 0;
     color: purple;
+}
+
+div.rendered-props {
+    width: 80%;
 }
 
 ul.cook-list {
