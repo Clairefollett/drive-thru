@@ -1,4 +1,32 @@
-@media only screen and (min-width: 900px)  {
+div.container {
+    width: 100%;
+}
+
+.menu {
+    list-style-type: none;
+    display: inline-block;
+    width: 100%;
+    height: 100%
+}
+
+li.food-item {
+    width: 30%;
+    height: 30%;
+    display: inline-block
+}
+div.specific-item {
+    display: inline-block;
+    width: 100%;
+    height: 100%
+}
+
+img.food-images {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* @media only screen and (min-width: 900px)  {
     html{width: 80%; height: 80%;}
     body {width: 80%; height: 80%;}
 }
@@ -8,11 +36,6 @@
     height: 100%;
 }
 
-.menu {
-    list-style-type: none;
-    width: 40%;
-    display: inline-block;
-}
 
 .food-item {
     width: 50%;
@@ -23,10 +46,6 @@
     margin: 2%
 }
 
-div.specific-item {
-    text-align: center;
-    vertical-align: middle;
-}
 
 div.order-list-container {
     width: 40%;
@@ -114,4 +133,4 @@ button.complete {
 
 .icon {
     fill: red;
-}
+} */

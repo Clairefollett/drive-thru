@@ -4,7 +4,7 @@ const MenuListItem = ({item, onItemSelect}) => {
     const number = '$' + parseFloat(Math.round(item.price * 100) / 100).toFixed(2);
     return (
         <li className="food-item" onClick={() => onItemSelect(item)}>
-            <div className="specific-item">{item.title} {number}</div>
+            <div className="specific-item">{item.image}</div>
         </li>
     )
 }
